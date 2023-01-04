@@ -1,0 +1,77 @@
+form {
+    display: grid;
+    grid-template-areas: "first second" "third third";
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: auto 4rem;
+    grid-auto-flow: row;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.sup {
+    margin-top: 0;
+    opacity: .9;
+    margin-bottom: 4rem;
+}
+
+.first-half {
+    grid-area: "first";
+    /* background-color: aqua; */
+    height: 45vh;
+}
+
+.second-half {
+    grid-area: "second";
+    /* background-color: blueviolet; */
+}
+
+.third-half {
+    grid-area: "third";
+    background-color: rgb(213, 139, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #f9c764;
+}
+
+input:focus {
+    outline: none;
+}
+
+fieldset {
+    border: none;
+    border: 2px solid #fcc24fe9;
+}
+
+.submit {
+    border: 0;
+    border: 2px solid #f9c764;
+    background-color: white;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color linear 80ms;
+}
+
+.submit:hover {
+    background-color: #f9c764;
+    color: white;
+}
