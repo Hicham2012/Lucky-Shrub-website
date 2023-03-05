@@ -8,11 +8,19 @@ html {
 
 body {
     display: grid;
-    grid-template-areas: "head nav" "main main" "foot foot";
+    grid-template-areas: "navb navb" "main main" "foot foot";
     grid-template-columns: 8rem auto;
     grid-template-rows: 14vh auto auto;
     margin: 0;
     overflow-x: hidden;
+}
+
+.cont-nav {
+    display: grid;
+    grid-area: navb;
+    grid-template-columns: 8rem auto;
+    grid-template-rows: 100%;
+    grid-template-areas: 'head nav';
 }
 
 header {
@@ -25,7 +33,7 @@ header {
     /* border: 1px solid black; */
     box-shadow: 0px 1px 10px -2px #f6b93f;
     z-index: 999;
-    padding: 49px 0;
+    /* padding: 49px 0; */
 }
 
 header>img {
@@ -37,37 +45,73 @@ header>img {
 .navbar {
     grid-area: nav;
     /* border: 1px solid black; */
-    box-shadow: 0px 1px 10px -2px #f6b93f;
     z-index: 999;
+    /* display: f; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    width: 100%;
+    /* height: 100%; */
+    box-shadow: 0px 1px 10px -2px #f6b93f;
 }
 
 .navbar>ul {
-    display: flex;
+    display: grid;
+    width: 100%;
+    height: 100%;
     align-items: center;
-    background-color: white;
-    justify-content: space-around;
+    /* background-color: red; */
     list-style: none;
     /* position: relative; */
-    margin: 0;
-    padding: 0;
+    grid-template-columns: 20% 30% 25% 25%;
+    grid-template-areas: 'home plan founders connect';
+    /* text-decoration: none; */
 }
 
-.navbar>ul>li>a {
+.navbar>ul>li:nth-child(1) {
+    /* background-color: blue; */
+    grid-area: home;
+}
+
+.navbar>ul>li:nth-child(2) {
+    /* background-color: orange; */
+    grid-area: plan;
+}
+
+.navbar>ul>li:nth-child(3) {
+    /* background-color: green; */
+    grid-area: founders;
+}
+
+.navbar>ul>li:nth-child(4) {
+    /* background-color: pink; */
+    grid-area: connect;
+}
+
+.navbar>ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.nav-text {
     text-decoration: none;
-    /* border: 1px solid black; */
     color: #f9c764;
-    background-color: white;
     font-family: sans-serif;
     font-weight: 400;
-    font-size: large;
-    /* z-index: -999; */
-    display: block;
-    padding: 38.5px 17px;
-    position: relative;
-    /* top: 20px; */
+    font-size: 1.2rem;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navbar>ul>li>a:hover {
+.nav-text:hover {
     background: #f9c764;
     color: white;
 }
@@ -158,6 +202,10 @@ footer {
     font-weight: 400;
 }
 
+.info--1 {
+    grid-area: info1;
+}
+
 .image1 {
     width: 105.27%;
     height: 13em;
@@ -169,13 +217,17 @@ footer {
     top: -1em;
     left: -1em;
     right: 0;
+    grid-area: image1;
 }
 
 .article1 {
     /* border: 1px solid red; */
     margin: 2rem 14rem;
-    display: flex;
+    display: grid;
     align-items: top;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'image1 info1';
 }
 
 .photo-1 {
@@ -183,16 +235,17 @@ footer {
     width: 25em;
     height: 25em;
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051573220857368576/botanical-garden-experiments.jpg);
-    background-size: cover;
+    background-size: 190%;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: .25em 0 0 .25em;
-    transition: transform 500ms;
+    transition: all 500ms;
     object-fit: cover;
     /* border: 1px solid blue; */
 }
 
 .photo-1:hover {
-    transform: scale(1.1);
-    z-index: 1;
+    background-size: 200%;
 }
 
 .info--1 {
@@ -238,28 +291,34 @@ button:hover {
 .article2 {
     /* border: 1px solid red; */
     margin: 2rem 14rem;
-    display: flex;
+    display: grid;
     align-items: top;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'info2 image2';
 }
 
 .photo-2 {
     /* border: 1px solid black; */
+    grid-area: image2;
     width: 25em;
     height: 25em;
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051829692249948221/ezgif.com-gif-maker.jpg);
-    background-size: cover;
+    background-size: 190%;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 0 .25em .25em 0;
-    transition: transform 500ms;
+    transition: all 500ms;
     object-fit: cover;
 }
 
 .photo-2:hover {
-    transform: scale(1.1);
-    z-index: 1;
+    background-size: 200%;
 }
 
 .info--2 {
     /* border: 1px solid blue; */
+    grid-area: info2;
     text-align: left;
     /* padding-left: .8em; */
     width: 25em;
@@ -378,9 +437,11 @@ input:focus {
 
 @media only screen and (max-width: 700px) {
     body {
-        grid-template-areas: "head nav" "main main" "foot foot";
+        grid-template-areas: "navb navb" "main main" "foot foot";
         grid-template-columns: 5rem auto;
         grid-template-rows: 14vh auto auto;
+        height: 300vh;
+        width: 100%;
     }
     main {
         /* display: flex;
@@ -398,8 +459,35 @@ input:focus {
     .carousel__item {
         padding: 1em 0em;
     }
+    .cont-nav {
+        display: grid;
+        grid-area: navb;
+        grid-template-columns: 100%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 'head' 'nav';
+    }
+    header {
+        grid-area: head;
+    }
+    .navbar {
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+    }
+    .article1 {
+        /* border: 1px solid red; */
+        margin: 2rem 14rem;
+        display: grid;
+        align-items: top;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'image1' 'info1';
+        gap: 8%;
+    }
     .image1 {
-        width: 108%;
+        /* width: 108%; */
     }
     .info>h1 {
         font-size: 3rem;
@@ -408,25 +496,41 @@ input:focus {
     .info>p {
         font-size: 2rem;
     }
-    article {
-        /* width: 5rem; */
-        padding: 1rem 0;
+    .article2 {
+        /* border: 1px solid red; */
+        margin: 2rem 14rem;
+        display: grid;
+        align-items: top;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'image2' 'info2';
+        gap: 8%;
     }
-    .article2,
+    .image1 {}
+    .article2 {
+        grid-area: article2;
+    }
     .article1 {
+        /* margin: auto;
+        margin-top: 2rem; */
+        grid-area: article1;
+    }
+    .article1,
+    .article2 {
         margin: auto;
     }
-    .photo-2,
-    .photo-1 {
-        width: 10rem;
-        height: 26rem;
-    }
-    .photo-1 {
-        height: 26.9rem;
+    .articls {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'article1' 'article2';
+        height: 180vh;
+        /* gap: 1%; */
+        /* background: red; */
     }
     .info--2,
     .info--1 {
-        width: 15rem;
+        /* width: 15rem; */
     }
     .info--1>button {
         margin-top: 0;
@@ -439,6 +543,6 @@ input:focus {
         padding-bottom: 2rem;
     }
     footer>p {
-        margin-top: 13.5em;
+        /* margin-top: 13.5em; */
     }
 }
