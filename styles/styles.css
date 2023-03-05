@@ -10,9 +10,12 @@ body {
     display: grid;
     grid-template-areas: "navb navb" "main main" "foot foot";
     grid-template-columns: 8rem auto;
-    grid-template-rows: 14vh auto auto;
+    grid-template-rows: 14vh 300vh 250px;
     margin: 0;
     overflow-x: hidden;
+    height: 300vh;
+    width: 100%;
+    gap: 2%;
 }
 
 .cont-nav {
@@ -130,6 +133,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     z-index: 999;
+    bottom: 0%;
 }
 
 .carousel {
@@ -162,6 +166,10 @@ footer {
     bottom: 0;
     left: 0;
     text-align: center;
+}
+
+.articls {
+    margin-top: 10%;
 }
 
 .carousel__button {
@@ -436,13 +444,12 @@ input:focus {
 }
 
 @media only screen and (max-width: 700px) {
-    body {
+    /* body {
         grid-template-areas: "navb navb" "main main" "foot foot";
         grid-template-columns: 5rem auto;
         grid-template-rows: 14vh auto auto;
-        height: 300vh;
-        width: 100%;
-    }
+        
+    } */
     main {
         /* display: flex;
         align-items: center;
@@ -471,10 +478,12 @@ input:focus {
     }
     .navbar {
         grid-area: nav;
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 10%;
+        justify-content: space-between;
+        /* gap: 10%; */
+        gap: 2%;
     }
     .article1 {
         /* border: 1px solid red; */
@@ -524,7 +533,8 @@ input:focus {
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
         grid-template-areas: 'article1' 'article2';
-        height: 180vh;
+        height: 200vh;
+        gap: 10%;
         /* gap: 1%; */
         /* background: red; */
     }
