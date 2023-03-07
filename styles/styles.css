@@ -10,12 +10,12 @@ body {
     display: grid;
     grid-template-areas: "navb navb" "main main" "foot foot";
     grid-template-columns: 8rem auto;
-    grid-template-rows: 14vh 205vh 250px;
+    grid-template-rows: 14vh auto 250px;
     margin: 0;
     overflow-x: hidden;
     /* height: 300vh; */
     width: 100%;
-    gap: 2%;
+    gap: 5%;
 }
 
 .cont-nav {
@@ -125,13 +125,15 @@ main {
     /* display: flex; */
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 50%;
+    grid-template-rows: 30% 65%;
     grid-template-areas: 'selector' 'articlsha';
+    /* background-color: red; */
+    gap: 5%;
 }
 
 .carousel {
     grid-area: carousel;
-    background-color: red;
+    /* background-color: red; */
     /* height: 50px; */
 }
 
@@ -180,7 +182,16 @@ footer {
 }
 
 .articls {
-    /* margin-top: 10%; */
+    grid-area: articlsha;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'article1' 'article2';
+    /* height: 200vh; */
+    /* gap: 10%; */
+    /* gap: 1%; */
+    /* background: red; */
+    gap: 5%;
 }
 
 .carousel__button {
@@ -270,6 +281,7 @@ footer {
 }
 
 .photo-1 {
+    grid-area: image1;
     /* border: 1px solid black; */
     width: 25em;
     height: 25em;
@@ -289,9 +301,11 @@ footer {
 
 .info--1 {
     /* border: 1px solid blue; */
+    grid-area: info1;
     text-align: left;
     padding-left: .8em;
     width: 25em;
+    position: relative;
 }
 
 .info--1>h2 {
@@ -312,7 +326,7 @@ footer {
 
 button {
     padding: 1em 5em;
-    margin-top: 8.03em;
+    /* margin-top: 8.03em; */
     background: #f9c764;
     color: white;
     font-size: .834em;
@@ -321,6 +335,8 @@ button {
     border-radius: .4em;
     border: 0;
     cursor: pointer;
+    position: absolute;
+    bottom: 0%;
 }
 
 button:hover {
@@ -335,6 +351,7 @@ button:hover {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     grid-template-areas: 'info2 image2';
+    /* gap: 10%; */
 }
 
 .photo-2 {
@@ -361,6 +378,7 @@ button:hover {
     text-align: left;
     /* padding-left: .8em; */
     width: 25em;
+    position: relative;
 }
 
 .info--2>h2 {
@@ -374,20 +392,20 @@ button:hover {
 
 .info--2>p {
     font-family: 'Inter', sans-serif;
-    margin: 0em;
+    /* margin: 0em; */
     line-height: 1.7em;
     opacity: .8;
 }
 
 .info--1>button {
-    margin-top: 22.4%;
+    /* margin-top: 22.4%; */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 34px center;
 }
 
 .info--2>button {
-    margin-top: 28.38%;
+    /* margin-top: 28.38%; */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 34px center;
@@ -479,7 +497,7 @@ input:focus {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     /* body {
         grid-template-areas: "navb navb" "main main" "foot foot";
         grid-template-columns: 5rem auto;
@@ -487,17 +505,22 @@ input:focus {
         
     } */
     body {
-        height: 300vh;
-        grid-template-rows: 14vh 300vh 250px;
-        gap: 3%;
+        height: 370vh;
+        grid-template-rows: 14vh 380vh auto;
+        /* gap: 5%; */
     }
     main {
         /* display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column; */
-        margin: 0;
-        padding: 0;
+        /* margin: 0;
+        padding: 0; */
+        gap: 0%;
+    }
+    .article {
+        gap: 20%;
+        transform: translateY(50%);
     }
     /* selector {
         margin: 0;
@@ -510,6 +533,33 @@ input:focus {
     background-color: transparent;
     width: 100%;
     height: 100px; */
+    .article1 {
+        /* border: 1px solid red; */
+        /* margin: 2rem 14rem; */
+        display: grid;
+        align-items: top;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'image1' 'info1';
+        gap: 13%;
+    }
+    .article2 {
+        /* border: 1px solid red; */
+        /* margin: 2rem 14rem; */
+        display: grid;
+        align-items: top;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'image2' 'info2';
+        gap: 13%;
+    }
+    .info>h1 {
+        font-size: 2rem;
+        /* font-weight: 400; */
+    }
+    .info>p {
+        font-size: 1.5rem;
+    }
 }
 
 .info {
@@ -542,39 +592,8 @@ header {
     gap: 2%;
 }
 
-.article1 {
-    /* border: 1px solid red; */
-    margin: 2rem 14rem;
-    display: grid;
-    align-items: top;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 'image1' 'info1';
-    gap: 8%;
-}
-
 .image1 {
     /* width: 108%; */
-}
-
-.info>h1 {
-    font-size: 2rem;
-    /* font-weight: 400; */
-}
-
-.info>p {
-    font-size: 1.5rem;
-}
-
-.article2 {
-    /* border: 1px solid red; */
-    margin: 2rem 14rem;
-    display: grid;
-    align-items: top;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 'image2' 'info2';
-    gap: 8%;
 }
 
 .image1 {}
@@ -594,29 +613,9 @@ header {
     margin: auto;
 }
 
-.articls {
-    grid-area: articlsha;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 'article1' 'article2';
-    height: 200vh;
-    gap: 10%;
-    /* gap: 1%; */
-    /* background: red; */
-}
-
 .info--2,
 .info--1 {
     /* width: 15rem; */
-}
-
-.info--1>button {
-    margin-top: 0;
-}
-
-.info--2>button {
-    margin-top: 0;
 }
 
 .socials {
@@ -626,7 +625,4 @@ header {
 
 footer>p {
     /* margin-top: 13.5em; */
-}
-
-
 }
