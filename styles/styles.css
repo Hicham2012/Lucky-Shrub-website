@@ -67,7 +67,7 @@ header>img {
     /* background-color: red; */
     list-style: none;
     /* position: relative; */
-    grid-template-columns: 10% 30% 25% 25%;
+    grid-template-columns: 15% 30% 25% 25%;
     grid-template-areas: 'home plan founders connect';
     /* text-decoration: none; */
 }
