@@ -10,10 +10,10 @@ body {
     display: grid;
     grid-template-areas: "navb navb" "main main" "foot foot";
     grid-template-columns: 8rem auto;
-    grid-template-rows: 14vh 300vh 250px;
+    grid-template-rows: 14vh 205vh 250px;
     margin: 0;
     overflow-x: hidden;
-    height: 300vh;
+    /* height: 300vh; */
     width: 100%;
     gap: 2%;
 }
@@ -61,13 +61,13 @@ header>img {
 
 .navbar>ul {
     display: grid;
-    width: 100%;
+    width: 97%;
     height: 100%;
     align-items: center;
     /* background-color: red; */
     list-style: none;
     /* position: relative; */
-    grid-template-columns: 20% 30% 25% 25%;
+    grid-template-columns: 15% 35% 25% 25%;
     grid-template-areas: 'home plan founders connect';
     /* text-decoration: none; */
 }
@@ -123,6 +123,16 @@ main {
     grid-area: main;
     background-color: white;
     /* display: flex; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 50%;
+    grid-template-areas: 'selector' 'articlsha';
+}
+
+.carousel {
+    grid-area: carousel;
+    background-color: red;
+    /* height: 50px; */
 }
 
 footer {
@@ -134,6 +144,7 @@ footer {
     flex-direction: column;
     z-index: 999;
     bottom: 0%;
+    position: relative;
 }
 
 .carousel {
@@ -143,13 +154,13 @@ footer {
 
 .carousel__item {
     /* border: 1px solid black; */
-    max-height: 13em;
-    background: rgba(75, 74, 74, 0.644);
+    /* max-height: 13em; */
+    /* background: rgba(75, 74, 74, 0.644); */
     object-fit: cover;
-    padding: 1em .95em;
+    /* padding: 1em .95em; */
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    font-size: 2em;
+    /* font-size: 2em; */
     color: #ffffff;
     display: none;
     margin: 0;
@@ -161,15 +172,15 @@ footer {
 
 .carousel__nav {
     width: 100%;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     left: 0;
     text-align: center;
 }
 
 .articls {
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 
 .carousel__button {
@@ -199,15 +210,19 @@ footer {
     font-weight: 600;
     position: absolute;
     top: 5.5rem;
+    left: 2%;
+    font-size: 3.0em;
 }
 
 .info>p {
     position: absolute;
-    top: 12rem;
+    top: 9rem;
     color: #ffffff;
     text-shadow: 0 1px rgba(75, 74, 74, 0.644);
     opacity: .9;
     font-weight: 400;
+    left: 2%;
+    font-size: 2.4em;
 }
 
 .info--1 {
@@ -215,17 +230,33 @@ footer {
 }
 
 .image1 {
-    width: 105.27%;
-    height: 13em;
+    /* width: 105.27%; */
+    width: 100%;
+    height: 25em;
     margin: 0;
     object-fit: right;
     align-items: center;
     justify-items: center;
-    position: relative;
-    top: -1em;
-    left: -1em;
-    right: 0;
+    /* position: relative; */
+    /* top: -1em; */
+    /* left: -1em; */
+    /* right: 0; */
+    /* position: absolute; */
     grid-area: image1;
+    background-position: center;
+    background-size: cover;
+}
+
+.first {
+    background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051511256932163684/wallpaperflare.com_wallpaper_1.jpg);
+}
+
+.second {
+    background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051538414085865502/wallpaperflare.com_wallpaper.jpg);
+}
+
+.third {
+    background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1052205906202472468/wallpaperflare.com_wallpaper.jpg);
 }
 
 .article1 {
@@ -364,6 +395,9 @@ button:hover {
 
 forum {
     margin-top: 2em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .label1 {
@@ -376,7 +410,7 @@ forum {
 
 .input1 {
     display: flex;
-    margin-left: 5.5em;
+    /* margin-left: 5.5em; */
     /* position: absolute;
     left: 520px;
     right: 520px; */
@@ -400,7 +434,7 @@ forum {
     border: 0;
     cursor: pointer;
     position: relative;
-    left: 25%;
+    /* left: 25%; */
 }
 
 .socials {
@@ -413,8 +447,10 @@ footer>p {
     font-size: medium;
     font-weight: 400;
     position: absolute;
-    left: 1em;
-    margin-top: 14em;
+    left: 2%;
+    /* margin-top: 14em; */
+    bottom: 0%;
+    /* color: red; */
 }
 
 .input1,
@@ -450,6 +486,11 @@ input:focus {
         grid-template-rows: 14vh auto auto;
         
     } */
+    body {
+        height: 300vh;
+        grid-template-rows: 14vh 300vh 250px;
+        gap: 3%;
+    }
     main {
         /* display: flex;
         align-items: center;
@@ -458,101 +499,134 @@ input:focus {
         margin: 0;
         padding: 0;
     }
-    selector {
+    /* selector {
         margin: 0;
         padding: 0;
         display: flex;
     }
     .carousel__item {
-        padding: 1em 0em;
-    }
-    .cont-nav {
-        display: grid;
-        grid-area: navb;
-        grid-template-columns: 100%;
-        grid-template-rows: 4rem auto;
-        grid-template-areas: 'head' 'nav';
-    }
-    header {
-        grid-area: head;
-    }
-    .navbar {
-        grid-area: nav;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* gap: 10%; */
-        gap: 2%;
-    }
-    .article1 {
-        /* border: 1px solid red; */
-        margin: 2rem 14rem;
-        display: grid;
-        align-items: top;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: 'image1' 'info1';
-        gap: 8%;
-    }
-    .image1 {
-        /* width: 108%; */
-    }
-    .info>h1 {
-        font-size: 3rem;
-        /* font-weight: 400; */
-    }
-    .info>p {
-        font-size: 2rem;
-    }
-    .article2 {
-        /* border: 1px solid red; */
-        margin: 2rem 14rem;
-        display: grid;
-        align-items: top;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: 'image2' 'info2';
-        gap: 8%;
-    }
-    .image1 {}
-    .article2 {
-        grid-area: article2;
-    }
-    .article1 {
-        /* margin: auto;
+        /* padding: 1em 0em; */
+    /* font-size: 0rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100px; */
+}
+
+.info {
+    width: 100%;
+}
+
+.image1 {
+    width: 100%;
+}
+
+.cont-nav {
+    display: grid;
+    grid-area: navb;
+    grid-template-columns: 100%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas: 'head' 'nav';
+}
+
+header {
+    grid-area: head;
+}
+
+.navbar {
+    grid-area: nav;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10%; */
+    gap: 2%;
+}
+
+.article1 {
+    /* border: 1px solid red; */
+    margin: 2rem 14rem;
+    display: grid;
+    align-items: top;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'image1' 'info1';
+    gap: 8%;
+}
+
+.image1 {
+    /* width: 108%; */
+}
+
+.info>h1 {
+    font-size: 2rem;
+    /* font-weight: 400; */
+}
+
+.info>p {
+    font-size: 1.5rem;
+}
+
+.article2 {
+    /* border: 1px solid red; */
+    margin: 2rem 14rem;
+    display: grid;
+    align-items: top;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'image2' 'info2';
+    gap: 8%;
+}
+
+.image1 {}
+
+.article2 {
+    grid-area: article2;
+}
+
+.article1 {
+    /* margin: auto;
         margin-top: 2rem; */
-        grid-area: article1;
-    }
-    .article1,
-    .article2 {
-        margin: auto;
-    }
-    .articls {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: 'article1' 'article2';
-        height: 200vh;
-        gap: 10%;
-        /* gap: 1%; */
-        /* background: red; */
-    }
-    .info--2,
-    .info--1 {
-        /* width: 15rem; */
-    }
-    .info--1>button {
-        margin-top: 0;
-    }
-    .info--2>button {
-        margin-top: 0;
-    }
-    .socials {
-        margin-top: 0em;
-        padding-bottom: 2rem;
-    }
-    footer>p {
-        /* margin-top: 13.5em; */
-    }
+    grid-area: article1;
+}
+
+.article1,
+.article2 {
+    margin: auto;
+}
+
+.articls {
+    grid-area: articlsha;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'article1' 'article2';
+    height: 200vh;
+    gap: 10%;
+    /* gap: 1%; */
+    /* background: red; */
+}
+
+.info--2,
+.info--1 {
+    /* width: 15rem; */
+}
+
+.info--1>button {
+    margin-top: 0;
+}
+
+.info--2>button {
+    margin-top: 0;
+}
+
+.socials {
+    margin-top: 0em;
+    padding-bottom: 2rem;
+}
+
+footer>p {
+    /* margin-top: 13.5em; */
+}
+
+
 }
