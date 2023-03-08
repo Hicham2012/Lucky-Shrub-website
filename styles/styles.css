@@ -21,7 +21,7 @@ body {
 .cont-nav {
     display: grid;
     grid-area: navb;
-    grid-template-columns: 8rem auto;
+    grid-template-columns: 10rem auto;
     grid-template-rows: 100%;
     grid-template-areas: 'head nav';
 }
