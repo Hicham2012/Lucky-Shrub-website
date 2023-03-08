@@ -28,6 +28,10 @@ body {
 
 header {
     grid-area: head;
+    background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1082999295378198568/Asset_33x.png);
+    background-position: center;
+    background-size: content;
+    background-repeat: no-repeat;
     background-color: #f6b93f;
     display: flex;
     align-items: center;
