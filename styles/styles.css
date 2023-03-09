@@ -19,12 +19,12 @@ body {
 }
 
 .cont-nav {
-    display: grid;
+    /* display: grid;
     grid-area: navb;
-    grid-template-columns: 100%;
-    grid-template-rows: 4.5em auto;
-    grid-template-areas: 'head' 'nav';
-    /* gap: 10%; */
+    grid-template-columns: 10rem auto;
+    grid-template-rows: 100%;
+    grid-template-areas: 'head nav'; */
+    z-index: 9999;
 }
 
 header {
@@ -42,12 +42,7 @@ header {
     box-shadow: 0px 1px 10px -2px #f6b93f;
     padding: 3% 0;
     z-index: 9999;
-}
-
-header>img {
-    width: 2.5em;
-    object-fit: cover;
-    /* margin-left: 4em; */
+    /* padding: 49px 0; */
 }
 
 .navbar {
@@ -62,6 +57,7 @@ header>img {
     width: 100%;
     /* height: 100%; */
     box-shadow: 0px 1px 10px -2px #f6b93f;
+    background: white;
 }
 
 .navbar>ul {
@@ -72,7 +68,7 @@ header>img {
     /* background-color: red; */
     list-style: none;
     /* position: relative; */
-    grid-template-columns: 15% 30% 25% 25%;
+    grid-template-columns: 15% 35% 25% 25%;
     grid-template-areas: 'home plan founders connect';
     /* text-decoration: none; */
 }
@@ -263,15 +259,15 @@ footer {
     background-size: cover;
 }
 
-.first {
+.firstt {
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051511256932163684/wallpaperflare.com_wallpaper_1.jpg);
 }
 
-.second {
+.secondd {
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051538414085865502/wallpaperflare.com_wallpaper.jpg);
 }
 
-.third {
+.thirdd {
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1052205906202472468/wallpaperflare.com_wallpaper.jpg);
 }
 
@@ -578,9 +574,18 @@ input:focus {
     width: 100%;
 }
 
+.cont-nav {
+    display: grid;
+    grid-area: navb;
+    grid-template-columns: 100%;
+    grid-template-rows: 4.5em auto;
+    grid-template-areas: 'head' 'nav';
+    /* gap: 10%; */
+}
 
-
-
+header {
+    grid-area: head;
+}
 
 .navbar {
     grid-area: nav;
