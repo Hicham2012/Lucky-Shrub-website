@@ -33,4 +33,31 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     // Select the first item on page load
     items[0].classList.add("carousel__item--selected");
     buttons[0].classList.add("carousel__button--selected");
+    // let aha = 0
+
+
+
+
+
+
+
+    var counter = 0
+    var value = 1
+
+    function changeCarousel() {
+        if (counter <= 1) {
+            counter += value
+        } else if (counter = 2) {
+            counter = 0
+        }
+
+        // items[counter].classList.add("carousel__item--selected");
+        // buttons[counter].classList.add("carousel__button--selected");
+
+        setTimeout(changeCarousel, 5000)
+
+        console.log(counter)
+    }
+    changeCarousel()
+
 });

@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.article-founder {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* padding-bottom: 3rem; */
+    /* margin-top: 5rem; */
+}
+
+.article-founder>p {
+    padding: .2rem 5%;
+    line-height: 1.5em;
+    font-family: sans-serif;
+    opacity: .8;
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        height: auto;
+    }
+}

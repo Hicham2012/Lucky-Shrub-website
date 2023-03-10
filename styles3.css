@@ -1,9 +1,10 @@
 form {
     display: grid;
-    grid-template-areas: "first second" "third third";
+    grid-template-areas: "first second";
     grid-template-columns: 15rem 15rem;
-    grid-template-rows: auto 4rem;
+    grid-template-rows: auto;
     grid-auto-flow: row;
+    position: relative;
 }
 
 body {
@@ -31,6 +32,15 @@ h1 {
     grid-area: "first";
     /* background-color: aqua; */
     height: 45vh;
+    display: grid;
+    grid-template-areas: 'inputs' 'third';
+    grid-template-columns: 100%;
+    /* grid-template-rows: 100% auto; */
+    /* gap: 20%; */
+}
+
+.inputs-1 {
+    grid-area: inputs;
 }
 
 .second-half {
@@ -40,11 +50,12 @@ h1 {
 
 .third-half {
     grid-area: "third";
-    background-color: rgb(213, 139, 48);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    position: relative;
+    /* margin-top: 10px; */
 }
 
 input {
@@ -69,6 +80,10 @@ fieldset {
     font-weight: 400;
     cursor: pointer;
     transition: background-color linear 80ms;
+    width: 15rem;
+    height: 5rem;
+    top: 100%;
+    position: absolute;
 }
 
 .submit:hover {

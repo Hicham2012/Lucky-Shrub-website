@@ -12,20 +12,24 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <img src="./logo/Lucky-Shrub-logos/Asset 3@3x.png">
-    </header>
+    <div class="cont-nav">
+        <!-- Header -->
+        <header>
+            <!-- <img src="./logo/Lucky-Shrub-logos/Asset 3@3x.png"> -->
+        </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./Plan.html">New Plans</a></li>
-            <li><a href="./Founders.html">Founders</a></li>
-            <li><a href="./Connect.html">Connect</a></li>
-        </ul>
-    </nav>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-text" href="./index.html">Home</a></li>
+                <li><a class="nav-text" href="./Plan.html">New Plans</a></li>
+                <li><a class="nav-text" href="./Founders.html">Founders</a></li>
+                <li><a class="nav-text" href="./Connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
 
     <!-- Main  -->
     <main>
@@ -40,21 +44,26 @@
 
             <form>
                 <div class="first-half">
-                    <label for="fname">Name:</label><br>
-                    <input type="text" id="fname" required><br><br>
-                    <label for="femail">Email:</label><br>
-                    <input type="email" id="femail" required><br><br>
-                    <label for="fcompany-name">Company name:</label><br>
-                    <input type="text" id="fcompany-name"><br><br>
-                    <fieldset>
-                        <legend>Objectives:</legend><br>
-                        <input type="radio" id="collab" name="choose">
-                        <label for="collab">Collab</label> <br>
-                        <input type="radio" id="meeting" name="choose">
-                        <label for="meeting">Meeting</label> <br>
-                        <input type="radio" id="Info" name="choose">
-                        <label for="Info">Info</label> <br>
-                    </fieldset>
+                    <div class="inputs-1">
+                        <label for="fname">Name:</label><br>
+                        <input type="text" id="fname" required><br><br>
+                        <label for="femail">Email:</label><br>
+                        <input type="email" id="femail" required><br><br>
+                        <label for="fcompany-name">Company name:</label><br>
+                        <input type="text" id="fcompany-name"><br><br>
+                        <fieldset>
+                            <legend>Objectives:</legend><br>
+                            <input type="radio" id="collab" name="choose">
+                            <label for="collab">Collab</label> <br>
+                            <input type="radio" id="meeting" name="choose">
+                            <label for="meeting">Meeting</label> <br>
+                            <input type="radio" id="Info" name="choose">
+                            <label for="Info">Info</label> <br>
+                        </fieldset>
+                    </div>
+                    <div class="third-half">
+                        <input class="submit" type="submit" class="third-half" value="Submit">
+                    </div>
                 </div>
                 <div class="second-half">
                     <label for="fname">Second name:</label><br>
@@ -64,7 +73,7 @@
                     <label for="fcompany-name">Company email:</label><br>
                     <input type="text" id="fcompany-name"><br><br><br>
                 </div>
-                <input class="submit" type="submit" class="third-half" value="Submit">
+
             </form>
         </section>
     </main>

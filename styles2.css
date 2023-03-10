@@ -259,7 +259,7 @@ section>p {
         display: none;
     }
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .info {
         max-width: 4em;
@@ -327,4 +327,8 @@ section>p {
         filter: blur(0);
         transform: translateY(0%) translateX(0%);
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
