@@ -1,4 +1,4 @@
 # Technologies used
-Javascript
-CSS3
-HTML5
+- Javascript
+- CSS3
+- HTML5
