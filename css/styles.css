@@ -9,21 +9,14 @@ html {
 body {
     display: grid;
     grid-template-areas: "navb navb" "main main" "foot foot";
-    grid-template-columns: 8rem auto;
+    grid-template-columns: auto;
     grid-template-rows: 14vh auto 250px;
     margin: 0;
     overflow-x: hidden;
-    /* height: 300vh; */
-    width: 100%;
     gap: 5%;
 }
 
 .cont-nav {
-    /* display: grid;
-    grid-area: navb;
-    grid-template-columns: 10rem auto;
-    grid-template-rows: 100%;
-    grid-template-areas: 'head nav'; */
     z-index: 9999;
 }
 
@@ -38,24 +31,19 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* border: 1px solid black; */
     box-shadow: 0px 1px 10px -2px #f6b93f;
     padding: 3% 0;
     z-index: 9999;
-    /* padding: 49px 0; */
 }
 
 .navbar {
     grid-area: nav;
-    /* border: 1px solid black; */
     z-index: 999;
-    /* display: f; */
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0%;
     width: 100%;
-    /* height: 100%; */
     box-shadow: 0px 1px 10px -2px #f6b93f;
     background: white;
 }
@@ -65,31 +53,24 @@ header {
     width: 97%;
     height: 100%;
     align-items: center;
-    /* background-color: red; */
     list-style: none;
-    /* position: relative; */
     grid-template-columns: 15% 35% 25% 25%;
     grid-template-areas: 'home plan founders connect';
-    /* text-decoration: none; */
 }
 
 .navbar>ul>li:nth-child(1) {
-    /* background-color: blue; */
     grid-area: home;
 }
 
 .navbar>ul>li:nth-child(2) {
-    /* background-color: orange; */
     grid-area: plan;
 }
 
 .navbar>ul>li:nth-child(3) {
-    /* background-color: green; */
     grid-area: founders;
 }
 
 .navbar>ul>li:nth-child(4) {
-    /* background-color: pink; */
     grid-area: connect;
 }
 
@@ -107,7 +88,6 @@ header {
     font-family: sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
-    /* background-color: aqua; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -123,19 +103,15 @@ header {
 main {
     grid-area: main;
     background-color: white;
-    /* display: flex; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30% 65%;
     grid-template-areas: 'selector' 'articlsha';
-    /* background-color: red; */
     gap: 5%;
 }
 
 .carousel {
     grid-area: carousel;
-    /* background-color: red; */
-    /* height: 50px; */
 }
 
 footer {
@@ -152,18 +128,12 @@ footer {
 
 .carousel {
     position: relative;
-    /* width: 50%; */
 }
 
 .carousel__item {
-    /* border: 1px solid black; */
-    /* max-height: 13em; */
-    /* background: rgba(75, 74, 74, 0.644); */
     object-fit: cover;
-    /* padding: 1em .95em; */
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    /* font-size: 2em; */
     color: #ffffff;
     display: none;
     margin: 0;
@@ -188,10 +158,6 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
     grid-template-areas: 'article1' 'article2';
-    /* height: 200vh; */
-    /* gap: 10%; */
-    /* gap: 1%; */
-    /* background: red; */
     gap: 5%;
 }
 
@@ -210,7 +176,6 @@ footer {
 }
 
 .info {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -242,18 +207,12 @@ footer {
 }
 
 .image1 {
-    /* width: 105.27%; */
     width: 100%;
     height: 25em;
     margin: 0;
     object-fit: right;
     align-items: center;
     justify-items: center;
-    /* position: relative; */
-    /* top: -1em; */
-    /* left: -1em; */
-    /* right: 0; */
-    /* position: absolute; */
     grid-area: image1;
     background-position: center;
     background-size: cover;
@@ -272,7 +231,6 @@ footer {
 }
 
 .article1 {
-    /* border: 1px solid red; */
     margin: 2rem 14rem;
     display: grid;
     align-items: top;
@@ -283,7 +241,6 @@ footer {
 
 .photo-1 {
     grid-area: image1;
-    /* border: 1px solid black; */
     width: 25em;
     height: 25em;
     background-image: url(https://cdn.discordapp.com/attachments/941095160517894185/1051573220857368576/botanical-garden-experiments.jpg);
@@ -293,7 +250,6 @@ footer {
     border-radius: .25em 0 0 .25em;
     transition: all 500ms;
     object-fit: cover;
-    /* border: 1px solid blue; */
 }
 
 .photo-1:hover {
@@ -301,7 +257,6 @@ footer {
 }
 
 .info--1 {
-    /* border: 1px solid blue; */
     grid-area: info1;
     text-align: left;
     padding-left: .8em;
@@ -429,11 +384,6 @@ forum {
 
 .input1 {
     display: flex;
-    /* margin-left: 5.5em; */
-    /* position: absolute;
-    left: 520px;
-    right: 520px; */
-    /* margin-top: 1em; */
     border: 0;
     border-bottom: 2px solid white;
     background-color: #f9c764;
@@ -453,7 +403,6 @@ forum {
     border: 0;
     cursor: pointer;
     position: relative;
-    /* left: 25%; */
 }
 
 .socials {
@@ -467,9 +416,7 @@ footer>p {
     font-weight: 400;
     position: absolute;
     left: 2%;
-    /* margin-top: 14em; */
     bottom: 0%;
-    /* color: red; */
 }
 
 .input1,
@@ -499,44 +446,18 @@ input:focus {
 }
 
 @media only screen and (max-width: 800px) {
-    /* body {
-        grid-template-areas: "navb navb" "main main" "foot foot";
-        grid-template-columns: 5rem auto;
-        grid-template-rows: 14vh auto auto;
-        
-    } */
     body {
         height: 370vh;
         grid-template-rows: 14vh 380vh auto;
-        /* gap: 5%; */
     }
     main {
-        /* display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; */
-        /* margin: 0;
-        padding: 0; */
         gap: 0%;
     }
     .article {
         gap: 20%;
         transform: translateY(50%);
     }
-    /* selector {
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-    .carousel__item {
-        /* padding: 1em 0em; */
-    /* font-size: 0rem;
-    background-color: transparent;
-    width: 100%;
-    height: 100px; */
     .article1 {
-        /* border: 1px solid red; */
-        /* margin: 2rem 14rem; */
         display: grid;
         align-items: top;
         grid-template-columns: 100%;
@@ -545,8 +466,6 @@ input:focus {
         gap: 13%;
     }
     .article2 {
-        /* border: 1px solid red; */
-        /* margin: 2rem 14rem; */
         display: grid;
         align-items: top;
         grid-template-columns: 100%;
@@ -556,7 +475,6 @@ input:focus {
     }
     .info>h1 {
         font-size: 2rem;
-        /* font-weight: 400; */
     }
     .info>p {
         font-size: 1.5rem;
@@ -580,7 +498,6 @@ input:focus {
     grid-template-columns: 100%;
     grid-template-rows: 4.5em auto;
     grid-template-areas: 'head' 'nav';
-    /* gap: 10%; */
 }
 
 header {
@@ -593,23 +510,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 10%; */
     gap: 2%;
 }
-
-.image1 {
-    /* width: 108%; */
-}
-
-.image1 {}
 
 .article2 {
     grid-area: article2;
 }
 
 .article1 {
-    /* margin: auto;
-        margin-top: 2rem; */
     grid-area: article1;
 }
 
@@ -618,20 +526,19 @@ header {
     margin: auto;
 }
 
-.info--2,
-.info--1 {
-    /* width: 15rem; */
-}
-
 .socials {
     margin-top: 0em;
     padding-bottom: 2rem;
 }
 
-footer>p {
-    /* margin-top: 13.5em; */
-<<<<<<< Updated upstream
+@media only screen and (max-width: 450px) {
+    .navbar>ul {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+    .articls {
+        margin: 0;
+        transform: scale(0.8);
+        transform-origin: center;
+    }
 }
-=======
-}
->>>>>>> Stashed changes

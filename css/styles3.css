@@ -18,6 +18,10 @@ main {
     justify-content: center;
 }
 
+.connect_content {
+    position: relative;
+}
+
 h1 {
     margin-bottom: 5px;
 }
@@ -30,13 +34,10 @@ h1 {
 
 .first-half {
     grid-area: "first";
-    /* background-color: aqua; */
     height: 45vh;
     display: grid;
     grid-template-areas: 'inputs' 'third';
     grid-template-columns: 100%;
-    /* grid-template-rows: 100% auto; */
-    /* gap: 20%; */
 }
 
 .inputs-1 {
@@ -45,7 +46,7 @@ h1 {
 
 .second-half {
     grid-area: "second";
-    /* background-color: blueviolet; */
+    position: relative;
 }
 
 .third-half {
@@ -54,8 +55,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    /* margin-top: 10px; */
+    position: absolute;
+    top: 103%;
 }
 
 input {
@@ -82,11 +83,16 @@ fieldset {
     transition: background-color linear 80ms;
     width: 15rem;
     height: 5rem;
-    top: 100%;
-    position: absolute;
 }
 
 .submit:hover {
     background-color: #f9c764;
     color: white;
+}
+
+@media only screen and (max-width: 450px) {
+    .connect_content {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
 }
